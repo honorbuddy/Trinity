@@ -116,6 +116,12 @@ namespace Trinity.Components.Combat
                 return false;
             }
 
+            if (ZetaDia.Me.IsCasting)
+            {
+                // Wait for the cast to finish before actually trying to interact again.
+                return true;
+            }
+
             // Gizmos should always use the MoveAndInteract coroutine.
             // Don't try to outsmart the game with custom shit down the line.
             if (target.IsGizmo &&
