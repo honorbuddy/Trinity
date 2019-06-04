@@ -1,9 +1,7 @@
-﻿using System;
-using Trinity.Framework.Actors.ActorTypes;
+﻿using Trinity.Framework.Actors.ActorTypes;
 using Trinity.Framework.Objects;
 using Trinity.Framework.Reference;
 using Trinity.Settings;
-using Zeta.Common;
 using Zeta.Game;
 using Zeta.Game.Internals.SNO;
 
@@ -100,8 +98,6 @@ namespace Trinity.Framework.Actors.Properties
             return ContainerTypes.None;
         }
 
-
-
         public static bool GetIsGizmoUsed(TrinityActor actor)
         {
             var attributes = actor.Attributes;
@@ -145,6 +141,9 @@ namespace Trinity.Framework.Actors.Properties
                     return true;
 
                 if (actor.Type == TrinityObjectType.Barricade && attributes.IsNoDamage)
+                    return true;
+
+                if (actor.Type == TrinityObjectType.Shrine)
                     return true;
 
                 if (actor.Type == TrinityObjectType.Destructible || actor.Type == TrinityObjectType.Barricade)

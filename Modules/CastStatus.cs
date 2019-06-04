@@ -66,7 +66,7 @@ namespace Trinity.Modules
 
         #region Skills
 
-        private static int BasicCompletionTimeOfTeleportingActions = 3750;
+        private static int BasicCompletionTimeOfTeleportingActions = 4750;
 
         /// <summary>
         /// Stone of recall spell (town portal)
